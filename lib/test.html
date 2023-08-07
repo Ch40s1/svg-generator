@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basic Navbar</title>
+    <style>
+        /* Styles for the Navbar */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+            background-color: #333;
+        }
+
+        .navbar-logo {
+            color: #fff;
+            font-size: 24px;
+            text-decoration: none;
+        }
+
+        .navbar-links {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            gap: 20px;
+        }
+
+        .navbar-links a {
+            color: #fff;
+            text-decoration: none;
+            padding: 8px 16px;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+        }
+
+        .navbar-links a:hover {
+            background-color: #555;
+        }
+        /* .navbar-logo{
+          width: 100px;
+          height: 100px;
+        } */
+    </style>
+</head>
+<body>
+
+<nav class="navbar">
+    <!-- Logo -->
+    <img src="./logo.svg" class="navbar-logo" alt="logo" style="width: 100px; height: 100px;">
+
+    <!-- Navbar links -->
+    <ul class="navbar-links">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Contact</a></li>
+        <li><a href="#">About Us</a></li>
+    </ul>
+</nav>
+
+</body>
+</html>
