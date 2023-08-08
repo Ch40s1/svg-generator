@@ -1,7 +1,0 @@
-<svg width="300" height="300" xmlns="http://www.w3.org/2000/svg">
-    <!-- Blue square -->
-    <rect width="18.75em" height="18.75em" fill="blue" />
-
-    <!-- White text saying "lol" in the middle -->
-    <text x="50%" y="50%" fill="white" font-size="5em" font-family="Arial, sans-serif" text-anchor="middle" dy="0.35em">lol</text>
-</svg>

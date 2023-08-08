@@ -41,11 +41,8 @@ inquirer
   let svg = shapesGenerator(data.userText, data.textColor, data.userShape.toLowerCase(), data.shapeColor);
   // console.log(userText + textColor + userShape + shapeColor);
   console.log('this is svg:'+ svg);
+  fs.writeFile('./lib/logo.svg', svg, (err) => {
+    if (err) throw err;
+    console.log('SVG updated!');
+  });
 });
-
-
-// get user answers
-// import data 
-// based on answers we call a function that generates a shape
-// this calls another function that applies the css
-// write file and generate svg
