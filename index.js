@@ -1,12 +1,13 @@
 const fs = require('fs');
 const inquirer = require('inquirer');
+const shapesGenerator = require('./lib/shapes')
 
 // Ask the questions 
 const questions = [
   {
     // question asks user for the text they want
     type: "input",
-    name: "unserText",
+    name: "userText",
     message: 'What text would you like?'   
   },
   {
@@ -33,6 +34,13 @@ inquirer
 .prompt(questions)
 .then((data) =>{
   console.log(JSON.stringify(data));
+  // let userText = data.userText;
+  // let textColor = data.textColor;
+  // let userShape = data.userShape;
+  // let shapeColor = data.shapeColor; 
+  let svg = shapesGenerator(data.userText, data.textColor, data.userShape.toLowerCase(), data.shapeColor);
+  // console.log(userText + textColor + userShape + shapeColor);
+  console.log('this is svg:'+ svg);
 });
 
 
