@@ -1,3 +1,4 @@
+// get all the required files
 const fs = require('fs');
 const inquirer = require('inquirer');
 const shapesGenerator = require('./lib/shapes')
@@ -30,19 +31,16 @@ const questions = [
     message: 'What shape color would you like ex:(blue or #F0FFFF)?'   
   },
 ];
+// compiles the data and returns as usable data
 inquirer
 .prompt(questions)
 .then((data) =>{
   console.log(JSON.stringify(data));
-  // let userText = data.userText;
-  // let textColor = data.textColor;
-  // let userShape = data.userShape;
-  // let shapeColor = data.shapeColor; 
+  // calls the function and add the user answers as arguments 
   let svg = shapesGenerator(data.userText, data.textColor, data.userShape.toLowerCase(), data.shapeColor);
-  // console.log(userText + textColor + userShape + shapeColor);
-  console.log('this is svg:'+ svg);
+  // writes and places the file in the specified location
   fs.writeFile('./lib/logo.svg', svg, (err) => {
     if (err) throw err;
-    console.log('SVG updated!');
+    console.log('SVG Generated!');
   });
 });
